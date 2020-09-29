@@ -27,3 +27,5 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[![Build Status](https://travis-ci.org/martkasp/portfolio.svg?branch=dev)](https://travis-ci.org/martkasp/portfolio)
