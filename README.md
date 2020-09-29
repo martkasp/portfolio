@@ -1,29 +1,4 @@
-# client
+# Portfolio client-side app
 
-## Project setup
-```
-yarn install
-```
+[![Build Status](https://travis-ci.org/martkasp/portfolio.svg?branch=dev)](https://travis-ci.org/martkasp/portfolio)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
