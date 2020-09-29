@@ -5,3 +5,4 @@ install:
     - yarn install
 script:
     - yarn build
+    - yarn jest
