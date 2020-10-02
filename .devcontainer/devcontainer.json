@@ -16,7 +16,10 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"octref.vetur"
+		"octref.vetur",
+		"esbenp.prettier-vscode",
+		"eamodio.gitlens",
+		"dbaeumer.vscode-eslint"
 	],
 
 	"workspaceFolder": "/app",

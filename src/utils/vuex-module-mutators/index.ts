@@ -6,7 +6,7 @@
 import { createDecorator } from 'vue-class-component';
 import { VuexModule } from 'vuex-module-decorators';
 
-export function getId(element:any) {
+export function getId(element: any) {
     if (!element.hasOwnProperty('id')) {
         throw new Error('Element has no id, please define custom getId method or add id to the element');
     }
@@ -19,7 +19,7 @@ function generateNameFromPath(path: string) {
 }
 
 function generateMutations(state: any, path: string = '') {
-    let mutations:any = {};
+    let mutations: any = {};
 
     Object.keys(state).forEach((key: string) => {
         const propertyPath = path === '' ? key : `${path}.${key}`;
@@ -83,7 +83,7 @@ export function AutoMutations(constructor: any | VuexModule) {
     return constructor;
 }
 
-export function Get(module: { [key: string]: Function | any; }, prop?: string) {
+export function Get(module: { [key: string]: Function | any }, prop?: string) {
     return createDecorator((options, key) => {
         if (!options.computed) options.computed = {};
         const propName = prop || key;
@@ -93,7 +93,7 @@ export function Get(module: { [key: string]: Function | any; }, prop?: string) {
     });
 }
 
-export function Sync(module: { [key: string]: Function | any; }, prop?: string) {
+export function Sync(module: { [key: string]: Function | any }, prop?: string) {
     return createDecorator((options, key) => {
         if (!options.computed) options.computed = {};
         const propName = prop || key;
