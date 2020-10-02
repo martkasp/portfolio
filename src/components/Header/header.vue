@@ -8,7 +8,7 @@
         </div>
         <div class="Header__Info md-layout-item md-size-50">
             <div class="md-layout-item md-size-100">
-                <h4>Martynas Kasparavičius</h4>
+                <h4>Karolis Žabinskis</h4>
             </div>
             <div class="Header__Socials md-layout-item md-size-100">
                 <div class="Header__SocialItem">
