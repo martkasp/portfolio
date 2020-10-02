@@ -4,10 +4,12 @@
 
 <style lang="scss">
     #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: $textColor;
+
+        /* body1 typography */
+        font-size: 16px;
+        letter-spacing: 0.5;
+        font-weight: 400;
     }
 </style>

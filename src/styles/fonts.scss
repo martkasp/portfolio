@@ -1,0 +1,62 @@
+/* Material design typography system */
+/* body1 typography is implemented in App.vue */
+
+h1 {
+    font-weight: 300;
+    font-size: 96px;
+    letter-spacing: -1.5;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: -0.5;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.25;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.15;
+}
+
+.subtitle1 {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.15;
+}
+
+.subtitle2 {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1;
+}
+
+.body2 {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.25;
+}
+
+.caption {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.4;
+}

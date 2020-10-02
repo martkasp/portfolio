@@ -20,6 +20,9 @@ module.exports = {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'error',
         'no-plus-plus': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
+        'class-methods-use-this': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
     },
     overrides: [
         {
