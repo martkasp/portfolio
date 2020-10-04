@@ -1,4 +1,5 @@
 import LandingPage from '@/views/LandingPage/index.vue';
+import SocialsExample from '@/views/SocialsExample/index.vue';
 
 export type RouteType = {
     path: string,
@@ -17,6 +18,11 @@ const routes = () => {
             path: '/',
             name: 'landing',
             component: LandingPage,
+        },
+        {
+            path: '/socials',
+            name: 'socialsExample',
+            component: SocialsExample,
         },
     ];
 
