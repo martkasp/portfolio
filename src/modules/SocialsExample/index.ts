@@ -13,19 +13,28 @@ import SocialsRepository from './services/SocialsRepository';
 export class SocialsExample extends VuexModule {
     private socials: SocialType[] = [];
 
+    private loading: boolean = false;
+
     @Mutation
     setSocials(val: SocialType[]) {
         this.socials = val;
     }
 
+    @Mutation
+    setLoading(val: boolean) {
+        this.loading = val;
+    }
+
     @Action
     async getAllSocials() {
         try {
+            this.setLoading(true);
             const result = await SocialsRepository.getAll();
             this.setSocials(result);
         } catch (e) {
             console.error(e);
         }
+        this.setLoading(false);
     }
 
     @Action

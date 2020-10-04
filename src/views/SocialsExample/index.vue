@@ -1,6 +1,6 @@
 <template>
     <Header title="John" />
-    <div class="md-elevation-4 md-layout md-gutter md-size-100">
+    <div v-if="!loading" class="md-elevation-4 md-layout md-gutter md-size-100">
         <div class="md-layout-item md-size-100">
             <h3>Socials requests example page</h3>
 
@@ -8,9 +8,12 @@
                 v-for="item in items"
                 :key="item.id"
             >
-                <a :href="item.link">{{ item.title }}</a>
+                <a target="_blank" :href="item.link">{{ item.title }}</a>
             </div>
         </div>
+    </div>
+    <div v-else class="Ui__LoaderContainer">
+        <div class="Ui__Loader"></div>
     </div>
 </template>
 
@@ -28,6 +31,8 @@ import { SocialType } from '@/modules/SocialsExample/types';
 })
 export default class SocialsExample extends Vue {
     @Get(socials, 'socials') private items!: SocialType[];
+
+    @Get(socials) private loading!: boolean;
 
     async created() {
         await socials.getAllSocials();
