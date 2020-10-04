@@ -1,5 +1,5 @@
 <template>
-    <div class="Header__Container md-layout">
+    <div class="Header__Container md-layout md-elevation-4">
         <div class="Header__Image md-layout-item md-size-50">
             <img
                 alt="Profile picture"
