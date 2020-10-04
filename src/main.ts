@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { MdButton, MdIcon } from 'vue-material/dist/components';
 import 'vue-material/dist/vue-material.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +14,9 @@ library.add(fas, fab);
 Vue.config.productionTip = false;
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+Vue.use(MdButton);
+Vue.use(MdIcon);
 
 new Vue({
     router,

@@ -1,30 +1,35 @@
 <template>
-    <Header title="John" />
-    <div v-if="!loading" class="md-elevation-4 md-layout md-gutter md-size-100">
-        <div class="md-layout-item md-size-100">
-            <h3>Socials requests example page</h3>
+    <div>
+        <Header title="John" />
+        <div v-if="!loading" class="md-elevation-4 md-layout md-gutter md-size-100">
+            <div class="md-layout-item md-size-100">
+                <h3>Socials requests example page</h3>
 
-            <div
-                v-for="item in items"
-                :key="item.id"
-            >
-                <a target="_blank" :href="item.link">{{ item.title }}</a>
+                <div
+                    v-for="item in items"
+                    :key="item.id"
+                >
+                    <a target="_blank" :href="item.link">{{ item.title }}</a>
+                </div>
+                <md-button class="md-icon-button md-raised md-accent">
+                    <md-icon>delete</md-icon>
+                </md-button>
             </div>
         </div>
-    </div>
-    <div v-else class="Ui__LoaderContainer">
-        <div class="Ui__Loader"></div>
+        <div v-else class="Ui__LoaderContainer">
+            <div class="Ui__Loader"></div>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-import { Vue, Options } from 'vue-class-component';
+import { Vue, Component } from 'vue-property-decorator';
 import { Get } from '@/utils/vuex-module-mutators';
 import Header from '@/components/Header/header.vue';
 import socials from '@/modules/SocialsExample';
 import { SocialType } from '@/modules/SocialsExample/types';
 
-@Options({
+@Component({
     components: {
         Header,
     },
