@@ -3,12 +3,12 @@
 </template>
 
 <script lang="ts">
-import { Vue, Options } from 'vue-class-component';
+import { Vue, Component } from 'vue-property-decorator';
 import { Get } from '@/utils/vuex-module-mutators';
 import Header from '@/components/Header/header.vue';
 import landingPage from '@/modules/LandingPage';
 
-@Options({
+@Component({
     components: {
         Header,
     },

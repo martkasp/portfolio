@@ -1,23 +1,13 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import LandingPage from '@/views/LandingPage/index.vue';
-import SocialsExample from '@/views/SocialsExample/index.vue';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import { routes } from './routes';
 
-const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/',
-        name: 'landing',
-        component: LandingPage,
-    },
-    {
-        path: '/socials',
-        name: 'socialsExample',
-        component: SocialsExample,
-    },
-];
+Vue.use(VueRouter);
 
-const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes,
+const router = new VueRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: routes(),
 });
 
 export default router;

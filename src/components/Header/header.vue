@@ -22,9 +22,9 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-class-component';
-import { Prop } from 'vue-property-decorator';
+import { Vue, Prop, Component } from 'vue-property-decorator';
 
+@Component
 export default class Header extends Vue {
     @Prop({ required: true }) private title!: string;
 }

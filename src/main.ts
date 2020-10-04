@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import Vue from 'vue';
 import 'vue-material/dist/vue-material.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -10,8 +10,12 @@ import store from './store';
 
 library.add(fas, fab);
 
-createApp(App)
-    .component('font-awesome-icon', FontAwesomeIcon)
-    .use(store)
-    .use(router)
-    .mount('#app');
+Vue.config.productionTip = false;
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+new Vue({
+    router,
+    store,
+    render: (h) => h(App),
+}).$mount('#app');
