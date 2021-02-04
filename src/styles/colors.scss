@@ -1,5 +1,11 @@
-$colorPrimary: #1fb9d4;
-$textColor: #2f2f2f;
+$colorPrimaryLight: #d7e360;
+$colorPrimary: #cddc39;
+$colorPrimaryDark: #8f9a27;
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorDarkGrey: rgb(58, 58, 58);
+
+$textColor: $colorWhite;
 $textColorHeader: #f1f1f1;
 
-$colorWhite: #fff;
+$backgroundColor: $colorPrimaryDark;

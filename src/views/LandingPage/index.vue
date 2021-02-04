@@ -1,25 +1,26 @@
 <template>
-    <Header :title="fullName" />
+    <div class="LandingPage__Container">
+        <Header />
+        <Content />
+    </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Get } from '@/utils/vuex-module-mutators';
-import Header from '@/components/Header/header.vue';
-import landingPage from '@/modules/LandingPage';
+import Header from './header.vue';
+import Content from './Content/index.vue';
 
 @Component({
     components: {
         Header,
+        Content,
     },
 })
 export default class LandingPage extends Vue {
-    @Get(landingPage) private fullName!: string;
 
-    created() {
-        console.log('Default value', this.fullName);
-        landingPage.changeFullName('John Doe');
-        console.log('New value', this.fullName);
-    }
 }
 </script>
+
+<style lang="scss" scoped>
+    @import './styles.scss';
+</style>
